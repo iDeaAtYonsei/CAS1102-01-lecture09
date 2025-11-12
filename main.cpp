@@ -8,14 +8,14 @@ struct Node {
 };
 
 // (1) TODO: Define the "Compare" function pointer type.
-// Requirement: a function pointer that takes two ints and returns boolean
+// A function pointer that takes two ints and returns boolean
 
 
-// (2) TODO: Implement the sorted insertion function (in ascending order, using Compare).
-// Requirement: Accept the list head by reference and insert `value` of the Node at the correct position.
+// (2) TODO: Implement the insertNode function (in ascending order, using Compare).
+// Parameters: a list head by reference, int 'value' of the Node, and Compare
 // Use Compare cmp: if cmp(a, b) is true, then `a` should appear before `b`.
-// - Find the first position where `value` should be inserted.
-void insertSorted(Node*& head, int value, Compare cmp) {
+// Find the first position where `value` should be inserted.
+void insertNode(Node*& head, int value, Compare cmp) {
 }
 
 void printList(Node* head) {
@@ -40,13 +40,13 @@ int main() {
     }
     std::cout << "\n";
 
-    // TODO: Create a non-capturing lambda and assign it to a Compare pointer named "asc".
-    // It should return true when `a` should come before `b` (ascending) — e.g., `a < b`.
+    // TODO: Create a lambda and assign it to a Compare pointer named "asc".
+    // It should return true when `a` should come before `b` (e.g., 'a < b').
     // Example: [](int a, int b){ return a < b; }
 
     Node* head = nullptr;
     for (int i = 0; i < N; ++i) {
-        insertSorted(head, arr[i], asc);
+        insertNode(head, arr[i], asc);
     }
 
     std::cout << "Sorted: ";
