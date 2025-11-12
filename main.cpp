@@ -40,7 +40,7 @@ int main() {
     }
     std::cout << "\n";
 
-    // TODO: Create a lambda and assign it to a Compare pointer named "asc".
+    // (3) TODO: Create a lambda and assign it to a Compare pointer named "asc".
     // It should return true when `a` should come before `b` (e.g., 'a < b').
     // Example: [](int a, int b){ return a < b; }
 
