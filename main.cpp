@@ -7,15 +7,16 @@ struct Node {
     Node* next;
 };
 
-// (1) TODO: Define the "Compare" function pointer type.
-// A function pointer that takes two ints and returns boolean
+// (1) TODO: Define the "compare" function.
+// A function pointer that takes two ints (a, b) and returns boolean.
+// Return true if a < b.
 
 
-// (2) TODO: Implement the insertNode function (in ascending order, using Compare).
-// Parameters: a list head by reference, int 'value' of the Node, and Compare
-// Use Compare cmp: if cmp(a, b) is true, then `a` should appear before `b`.
+// (2) TODO: Implement the insertNode function (in ascending order, using compare).
+// Parameters: a list 'head' by reference, int 'value' of the Node, and a function ('func') to compare two int values
+// Use com if func(a, b) is true, then `a` should appear before `b`.
 // Find the first position where `value` should be inserted.
-void insertNode(Node*& head, int value, Compare cmp) {
+void insertNode() {
 }
 
 void printList(Node* head) {
@@ -40,13 +41,9 @@ int main() {
     }
     std::cout << "\n";
 
-    // (3) TODO: Create a lambda and assign it to a Compare pointer named "asc".
-    // It should return true when `a` should come before `b` (e.g., 'a < b').
-    // Example: [](int a, int b){ return a < b; }
-
     Node* head = nullptr;
     for (int i = 0; i < N; ++i) {
-        insertNode(head, arr[i], asc);
+        insertNode(head, arr[i], compare);
     }
 
     std::cout << "Sorted: ";
